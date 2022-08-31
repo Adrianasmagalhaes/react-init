@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import Book from "./components/Book";
 
 function App() {
+  const livros = [
+    {
+      id: "1",
+      title: "1889",
+    },
+    {
+      id: "2",
+      title: "A arte da guerra",
+    },
+    {
+      id: "3",
+      title: "A garota do lago",
+    },
+    { id: "4",
+      title: "Moby Dick" },
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h3>Livros</h3>
+
+      <div>
+        {livros.map((book) => (
+          <Book key={book.id} id={book.id} title={book.title} />
+        ))}
+        {/* <Book title="1889 " />
+        <Book title="A arte da guerra " />
+        <Book title="A garota do lago " />
+        <Book title="Moby Dick" /> */}
+      </div>
     </div>
   );
 }

@@ -1,14 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+//const, let, var - declaracão de variavel
+//A variavel root recebe através da classe ReactDom com a chamada 
+//do método createRoot, um elemento HTML , através da referência document.getElementById('root')
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+
     <App />
-  </React.StrictMode>
+
 );
 
 // If you want to start measuring performance in your app, pass a function
