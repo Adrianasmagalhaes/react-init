@@ -1,4 +1,7 @@
 import Book from "./components/Book";
+import BookList from "./pages/BookList";
+import FormBook from "./pages/FormBook";
+
 
 function App() {
   const livros = [
@@ -20,6 +23,8 @@ function App() {
 
   return (
     <div>
+      <FormBook/>
+      <BookList/>
       <h3>Livros</h3>
 
       <div>
